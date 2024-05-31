@@ -1,4 +1,4 @@
-FROM node:20-alpine3.20 AS frontend
+FROM node:22-alpine3.20 AS frontend
 
 WORKDIR /home/node/terralist
 
