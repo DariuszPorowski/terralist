@@ -90,3 +90,13 @@ tasks:
         {{- else -}}
         go test -tags=mocks -count=1 {{.TEST_PACKAGES}}
         {{- end -}}
+
+  ngrok:start:
+    dotenv: ['ngrok.env']
+    cmds:
+      - ngrok http --domain=$NGROK_DOMAIN 5758
+
+  terralist:start:
+    dotenv: ['terralist.env']
+    cmds:
+      - ./terralist server
